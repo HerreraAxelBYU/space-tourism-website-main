@@ -6,22 +6,43 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
   
+  <script src="https://cdn.tailwindcss.com"></script>
   <title>Frontend Mentor | Space tourism website</title>
 </head>
-<body>
+<body class="bg-[url('./assets/home/background-home-desktop.jpg')] bg-no-repeat bg-cover">
+  
+  <header class="w-full flex justify-between p-12">
+    <div>
+      <img src="./assets/shared/logo.svg" alt="">
+    </div>
+    <nav class="w-[50rem] h-[5rem] backdrop-blur flex justify-start p-6 ">
+      <ul class="w-140 flex justify-between items-center gap-x-12">
+        <li class="text-white">00 HOME</li>
+        <li class="text-white">01 DESTINATION</li>
+        <li class="text-white">02 CREW</li>
+        <li class="text-white">03 TECHNOLOGY</li>
+      </ul>
+    </nav>
+  </header>
 
-  00 Home
-  01 Destination
-  02 Crew
-  03 Technology
+  <main class="w-full h-[70rem] mt-20 flex justify-around">
+    <div class="w-[25rem] h-[35rem]">
+      <p class="text-white text-xl">
+        <span class="text-3xl tracking-wide">So, you want to travel to</span><br>
+        <span class="text-9xl p-2">Space</span><br><br>
+        Let’s face it; if you want to go to space, you might as well genuinely go to 
+        outer space and not hover kind of on the edge of it. Well sit back, and relax 
+        because we’ll give you a truly out of this world experience!
+      </p>
+    </div>
+    <div>
+      <button class="bg-white p-8">Explore</button>
+    </div>
+    
+  </main>
+  
 
-  So, you want to travel to
-  Space
-  Let’s face it; if you want to go to space, you might as well genuinely go to 
-  outer space and not hover kind of on the edge of it. Well sit back, and relax 
-  because we’ll give you a truly out of this world experience!
-
-  Explore
+  
 
 </body>
 </html>
