@@ -4,44 +4,66 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;1,200&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
   
   <script src="https://cdn.tailwindcss.com"></script>
   <title>Frontend Mentor | Space tourism website</title>
 </head>
-<body class="bg-[url('./assets/home/background-home-desktop.jpg')] bg-no-repeat bg-cover">
+<body class="p-0 m-0 box-border bg-[url('./assets/home/background-home-mobile.jpg')] md:bg-[url('./assets/home/background-home-tablet.jpg')] lg:bg-[url('./assets/home/background-home-desktop.jpg')] bg-no-repeat bg-cover lg:h-[50rem]">
   
-  <header class="w-full flex justify-between p-12">
+  <header class="w-full p-4 flex justify-between md:p-14">
+
     <div>
-      <img src="./assets/shared/logo.svg" alt="">
+      <img class="w-[40px] h-[40px] md-w[48px] md-h[48px]" src="./assets/shared/logo.svg" alt="">
     </div>
-    <nav class="w-[50rem] h-[5rem] backdrop-blur flex justify-start p-6 ">
-      <ul class="w-140 flex justify-between items-center gap-x-12">
-        <li class="text-white">00 HOME</li>
-        <li class="text-white">01 DESTINATION</li>
-        <li class="text-white">02 CREW</li>
-        <li class="text-white">03 TECHNOLOGY</li>
+
+    <!-- H A M B U R G U E R  B U T T O N-->
+    <div class="md:hidden mt-2 mr-6 pointer">
+      <img class="w-[30px] h-[30px] " src="./assets/shared/icon-hamburger.svg" alt="">
+    </div>
+
+    <!-- N A V  B A R -->
+    <nav class="hidden lg:w-[40rem] lg:h-[5rem] lg:backdrop-blur md:flex lg:p-6 ">
+      <ul class="w-100 flex items-center md:gap-x-10 lg:gap-x-12">
+        <li class="text-sm text-[#d2d8f9]"><a href=""><span class="text-white">00</span> HOME</a></li>
+        <li class="text-sm text-[#d2d8f9]"><a href=""><span class="text-white">01</span> DESTINATION</a></li>
+        <li class="text-sm text-[#d2d8f9]"><a href=""><span class="text-white">02</span> CREW</a></li>
+        <li class="text-sm text-[#d2d8f9]"><a href=""><span class="text-white">03</span> TECHNOLOGY</a></li>
       </ul>
     </nav>
   </header>
 
-  <main class="w-full h-[70rem] mt-20 flex justify-around">
-    <div class="w-[25rem] h-[35rem]">
-      <p class="text-white text-xl">
-        <span class="text-3xl tracking-wide">So, you want to travel to</span><br>
-        <span class="text-9xl p-2">Space</span><br><br>
-        Let’s face it; if you want to go to space, you might as well genuinely go to 
+  <main class="w-full mt-14 md:mt-20 md:h[25rem] grid grid-cols-1 gap-4 justify-items-center lg:h-[35rem] lg:flex lg:justify-around lg:items-center">
+    <div class="w-full p-6 md:w-[28rem] md:h-[28rem] lg:w-[25rem] lg:h-[35rem]">
+      <p class="text-white text-xl text-center font-['Raleway']">
+        <span class="md:text-3xl tracking-wide text-[#d2d8f9]">So, you want to travel to</span><br><br>
+        <span class="text-[80px] md:text-9xl italic text-white">Space</span><br><br>
+        <span class="text-base text-[#d2d8f9]">Let’s face it; if you want to go to space, you might as well genuinely go to 
         outer space and not hover kind of on the edge of it. Well sit back, and relax 
-        because we’ll give you a truly out of this world experience!
+        because we’ll give you a truly out of this world experience!</span>
       </p>
     </div>
     <div>
-      <button class="bg-white p-8">Explore</button>
+      <button class="w-[9rem] h-[9rem] md:w-[15rem] md:h-[15rem] md:text-3xl lg:w-[15rem] lg:h-[15rem] rounded-full bg-white lg:text-lg font-['Raleway']">EXPLORE</button>
     </div>
     
   </main>
   
-
+<style>
+  :root {
+    --main-color: #0b0d17;
+    --secend-color: #d2d8f9;
+    --hover-color: #85868b;
+    --main-padding-top: 100px;
+    --main-padding-bottom: 100px;
+    --main-font: "Barlow Condensed", sans-serif;
+    --secend-font: "Bellefair", serifs;
+  }
+</style>
+  
   
 
 </body>
