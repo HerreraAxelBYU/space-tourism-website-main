@@ -14,19 +14,33 @@
 </head>
 <body class="p-0 m-0 box-border bg-[url('./assets/home/background-home-mobile.jpg')] md:bg-[url('./assets/home/background-home-tablet.jpg')] lg:bg-[url('./assets/home/background-home-desktop.jpg')] bg-no-repeat bg-cover lg:h-[50rem]">
   
-  <header class="w-full p-4 flex justify-between md:p-14">
+  <header class="w-full p-4 flex justify-between md:p-14 relative">
 
     <div>
       <img class="w-[40px] h-[40px] md-w[48px] md-h[48px]" src="./assets/shared/logo.svg" alt="">
     </div>
 
     <!-- H A M B U R G U E R  B U T T O N-->
-    <div class="md:hidden mt-2 mr-6 pointer">
+    <div class="md:hidden mt-2 mr-6 pointer" id="hamburguer_btn">
       <img class="w-[30px] h-[30px] " src="./assets/shared/icon-hamburger.svg" alt="">
     </div>
 
+    <!-- H I D D E N  M E N U -->
+    <nav class="hidden absolute top-0 right-0 w-[15rem] h-[43rem] backdrop-blur" id="hidden_menu">
+      <div class="w-full flex justify-end">
+        <img class="p-6 pointer" src="./assets/shared/icon-close.svg" alt="" id="close_btn">
+      </div>
+      
+      <ul class="">
+        <li class="pl-6 pt-8 text-sm text-[#d2d8f9]"><a href=""><span class="text-white">00</span> HOME</a></li>
+        <li class="pl-6 pt-8 text-sm text-[#d2d8f9]"><a href=""><span class="text-white">01</span> DESTINATION</a></li>
+        <li class="pl-6 pt-8 text-sm text-[#d2d8f9]"><a href=""><span class="text-white">02</span> CREW</a></li>
+        <li class="pl-6 pt-8 text-sm text-[#d2d8f9]"><a href=""><span class="text-white">03</span> TECHNOLOGY</a></li>
+      </ul>
+    </nav>
+
     <!-- N A V  B A R -->
-    <nav class="hidden lg:w-[40rem] lg:h-[5rem] lg:backdrop-blur md:flex lg:p-6 ">
+    <nav class="hidden lg:w-[40rem] lg:h-[5rem] lg: md:flex lg:p-6 backdrop-blur">
       <ul class="w-100 flex items-center md:gap-x-10 lg:gap-x-12">
         <li class="text-sm text-[#d2d8f9]"><a href=""><span class="text-white">00</span> HOME</a></li>
         <li class="text-sm text-[#d2d8f9]"><a href=""><span class="text-white">01</span> DESTINATION</a></li>
@@ -66,5 +80,6 @@
   
   
 
+  <script src="./js/main.js"></script>
 </body>
 </html>
