@@ -4,34 +4,86 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;1,200&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
   
   <title>Frontend Mentor | Space tourism website</title>
 </head>
-<body>
+<body class="bg-[url('./assets/destination/background-destination-mobile.jpg')] md:bg-[url('./assets/destination/background-destination-tablet.jpg')] lg:bg-[url('./assets/destination/background-destination-desktop.jpg')] bg-no-repeat bg-cover">
 
-  00 Home
-  01 Destination
-  02 Crew
-  03 Technology
+  <header class="w-full p-4 flex justify-between md:p-14 relative">
+    <div>
+      <img class="w-[40px] h-[40px] md-w[48px] md-h[48px]" src="./assets/shared/logo.svg" alt="">
+    </div>
 
-  01 Pick your destination
+    <!-- H A M B U R G U E R  B U T T O N-->
+    <div class="md:hidden mt-2 mr-6 pointer" id="hamburguer_btn">
+      <img class="w-[30px] h-[30px] " src="./assets/shared/icon-hamburger.svg" alt="">
+    </div>
 
-  Moon
-  Mars
-  Europa
-  Titan
+    <!-- H I D D E N  M E N U -->
+    <nav class="hidden absolute top-0 right-0 w-[15rem] h-[43rem] backdrop-blur" id="hidden_menu">
+      <div class="w-full flex justify-end">
+        <img class="p-6 pointer" src="./assets/shared/icon-close.svg" alt="" id="close_btn">
+      </div>
+      
+      <ul class="">
+        <li class="pl-6 pt-8 text-sm text-[#d2d8f9]"><a href="./index.html"><span class="text-white">00</span> HOME</a></li>
+        <li class="pl-6 pt-8 text-sm text-[#d2d8f9]"><a href="./destination-moon.html"><span class="text-white">01</span> DESTINATION</a></li>
+        <li class="pl-6 pt-8 text-sm text-[#d2d8f9]"><a href="./crew-commander.html"><span class="text-white">02</span> CREW</a></li>
+        <li class="pl-6 pt-8 text-sm text-[#d2d8f9]"><a href="./technology-vehicle.html"><span class="text-white">03</span> TECHNOLOGY</a></li>
+      </ul>
+    </nav>
 
-  Moon
+    <!-- N A V  B A R -->
+    <nav class="hidden lg:w-[40rem] lg:h-[5rem] lg: md:flex lg:p-6 backdrop-blur">
+      <ul class="w-100 flex items-center md:gap-x-10 lg:gap-x-12">
+        <li class="text-sm text-[#d2d8f9]"><a href="./index.html"><span class="text-white">00</span> HOME</a></li>
+        <li class="text-sm text-[#d2d8f9]"><a href="./destination-moon.html"><span class="text-white">01</span> DESTINATION</a></li>
+        <li class="text-sm text-[#d2d8f9]"><a href="./crew-commander.html"><span class="text-white">02</span> CREW</a></li>
+        <li class="text-sm text-[#d2d8f9]"><a href="./technology-vehicle.html"><span class="text-white">03</span> TECHNOLOGY</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  See our planet as you’ve never seen it before. A perfect relaxing trip away to help 
-  regain perspective and come back refreshed. While you’re there, take in some history 
-  by visiting the Luna 2 and Apollo 11 landing sites.
+  <main class="w-full p-6 flex flex-col gap-8">
+    <h1 class="text-white text-base text-center"><span>01</span> Pick your destination</h1>
+    <div class="w-full flex justify-center">
+      <img class="w-[10rem] h-[10rem]" src="./assets/destination/image-moon.webp" alt="">
+    </div>
+
+    <nav class="w-full">
+      <ul class="flex justify-center gap-4">
+        <li class="text-sm text-[#d2d8f9]">MOON</li>
+        <li class="text-sm text-[#d2d8f9]">MARS</li>
+        <li class="text-sm text-[#d2d8f9]">EUROPA</li>
+        <li class="text-sm text-[#d2d8f9]">TITAN</li>
+      </ul>
+    </nav>
+    <div>
+      <h2 class="text-6xl text-white text-center">MOON</h2>
+      <p class="text-[#d2d8f9] text-center mt-4">See our planet as you’ve never seen it before. A perfect relaxing trip away to help 
+      regain perspective and come back refreshed. While you’re there, take in some history 
+      by visiting the Luna 2 and Apollo 11 landing sites.</p>
+    </div>
+    
+
+  </main>
+  
+  
+
+  
 
   Avg. distance
   384,400 km
 
   Est. travel time
   3 days
+
+  <script src="./js/main.js"></script>
 </body>
 </html>
