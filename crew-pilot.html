@@ -6,23 +6,86 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
   
+  <script src="https://cdn.tailwindcss.com"></script>
+  
   <title>Frontend Mentor | Space tourism website</title>
 </head>
 <body>
 
-  00 Home
-  01 Destination
-  02 Crew
-  03 Technology
+ <body class="bg-[url('./assets/destination/background-destination-mobile.jpg')] md:bg-[url('./assets/destination/background-destination-tablet.jpg')] lg:bg-[url('./assets/destination/background-destination-desktop.jpg')] bg-no-repeat bg-cover">
 
-  02 Meet your crew
+  <header class="w-full p-4 flex justify-between md:p-14 relative">
+    <div>
+      <img class="w-[40px] h-[40px] md-w[48px] md-h[48px]" src="./assets/shared/logo.svg" alt="">
+    </div>
 
-  Pilot
-  Victor Glover
+    <!-- H A M B U R G U E R  B U T T O N-->
+    <div class="md:hidden mt-2 mr-6 pointer" id="hamburguer_btn">
+      <img class="w-[30px] h-[30px] " src="./assets/shared/icon-hamburger.svg" alt="">
+    </div>
 
-  Pilot on the first operational flight of the SpaceX Crew Dragon to the 
-  International Space Station. Glover is a commander in the U.S. Navy where 
-  he pilots an F/A-18.He was a crew member of Expedition 64, and served as a 
-  station systems flight engineer. 
+    <!-- H I D D E N  M E N U -->
+    <nav class="hidden absolute top-0 right-0 w-[15rem] h-[43rem] backdrop-blur" id="hidden_menu">
+      <div class="w-full flex justify-end">
+        <img class="p-6 pointer" src="./assets/shared/icon-close.svg" alt="" id="close_btn">
+      </div>
+      
+      <ul class="">
+        <li class="pl-6 pt-8 text-sm text-[#d2d8f9]"><a href="./index.html"><span class="text-white">00</span> HOME</a></li>
+        <li class="pl-6 pt-8 text-sm text-[#d2d8f9]"><a href="./destination-moon.html"><span class="text-white">01</span> DESTINATION</a></li>
+        <li class="pl-6 pt-8 text-sm text-[#d2d8f9]"><a href="./crew-commander.html"><span class="text-white">02</span> CREW</a></li>
+        <li class="pl-6 pt-8 text-sm text-[#d2d8f9]"><a href="./technology-vehicle.html"><span class="text-white">03</span> TECHNOLOGY</a></li>
+      </ul>
+    </nav>
+
+    <!-- N A V  B A R -->
+    <nav class="hidden lg:w-[40rem] lg:h-[5rem] lg: md:flex lg:p-6 backdrop-blur">
+      <ul class="w-100 flex items-center md:gap-x-10 lg:gap-x-12">
+        <li class="text-sm text-[#d2d8f9]"><a href="./index.html"><span class="text-white">00</span> HOME</a></li>
+        <li class="text-sm text-[#d2d8f9]"><a href="./destination-moon.html"><span class="text-white">01</span> DESTINATION</a></li>
+        <li class="text-sm text-[#d2d8f9]"><a href="./crew-commander.html"><span class="text-white">02</span> CREW</a></li>
+        <li class="text-sm text-[#d2d8f9]"><a href="./technology-vehicle.html"><span class="text-white">03</span> TECHNOLOGY</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- M A I N  D E S T I N A T I O N -->
+  
+  <main class="w-full p-6 flex flex-col gap-12 lg:grid lg:grid-cols-2">
+    <h1 class="text-white text-base text-center md:text-[1.7rem] lg:col-span-full"><span>01</span> Pick your destination</h1>
+    <div class="w-full flex justify-center">
+      <img class="w-[10rem] h-[10rem] md:w-[18.5rem] md:h-[18.5rem] lg:w-[27rem] lg:h-[27rem] lg:row-span-3" src="./assets/destination/image-moon.webp" alt="" id="imagen">
+    </div>
+
+    <section class="flex flex-col gap-10 lg:w-[28rem]">
+      <nav class="w-full lg:col-start-2 ">
+        <ul class="flex justify-center gap-4 lg:justify-start" id="planets_menu">
+          <li class="text-sm text-[#d2d8f9] md:text-base active:text-red-500 cursor-pointer" id="planet1">MOON</li>
+          <li class="text-sm text-[#d2d8f9] md:text-base active:text-red-500 cursor-pointer" id="planet2">MARS</li>
+          <li class="text-sm text-[#d2d8f9] md:text-base active:text-red-500 cursor-pointer" id="planet3">EUROPA</li>
+          <li class="text-sm text-[#d2d8f9] md:text-base active:text-red-500 cursor-pointer" id="planet4">TITAN</li>
+        </ul>
+    </nav>
+
+      <div class="w-full md:px-16 border-b-[1px] border-[#383B4B] lg:col-span-2 lg:p-0">
+        <h2 class="text-7xl text-white text-center lg:text-start" id="planeta_titulo">MOON</h2>
+        <p class="text-[#d2d8f9] md:text-lg text-center md:leading-loose mt-4 mb-4 lg:text-base lg:text-start" id="planeta_descripcion">See our planet as you’ve never seen it before. A perfect relaxing trip away to help 
+        regain perspective and come back refreshed. While you’re there, take in some history 
+        by visiting the Luna 2 and Apollo 11 landing sites.</p>
+      </div>
+
+      <div class="w-full flex flex-col items-center gap-1 md:grid grid-cols-2 md:justify-items-center lg:justify-items-start id="parrafos">
+        <p class="text-[#d2d8f9]">AVG. DISTANCE</p>
+        <p class="text-white text-[28px] md:col-start-1 md:col-end-2" id="distancia">384,400 KM</p>
+        <p class="text-[#d2d8f9] md:col-start-2 md:col-end-3 md:row-start-1">EST. TRAVEL TIME</p>
+        <p class="text-white text-[28px] md:col-start-2 md:col-end-3" id="tiempo">3 DAYS</p>
+      </div>
+    </section>
+  
+  </main>
+  
+  <script src="./js/main.js"></script>
+  <script src="./js/destination.js"></script>
+</body>
 </body>
 </html>
