@@ -51,36 +51,38 @@
   </header>
 
   <!-- M A I N  D E S T I N A T I O N -->
-  <main class="w-full p-6 flex flex-col gap-8">
-    <h1 class="text-white text-base text-center"><span>01</span> Pick your destination</h1>
+  
+  <main class="w-full p-6 flex flex-col gap-12 lg:grid lg:grid-cols-2">
+    <h1 class="text-white text-base text-center md:text-[1.7rem] lg:col-span-full"><span>01</span> Pick your destination</h1>
     <div class="w-full flex justify-center">
-      <img class="w-[10rem] h-[10rem]" src="./assets/destination/image-moon.webp" alt="" id="imagen">
+      <img class="w-[10rem] h-[10rem] md:w-[18.5rem] md:h-[18.5rem] lg:w-[27rem] lg:h-[27rem] lg:row-span-3" src="./assets/destination/image-moon.webp" alt="" id="imagen">
     </div>
 
-    <nav class="w-full">
-      <ul class="flex justify-center gap-4" id="planets_menu">
-        <li class="text-sm text-[#d2d8f9] active:text-red-500" id="planet1">MOON</li>
-        <li class="text-sm text-[#d2d8f9] active:text-red-500" id="planet2">MARS</li>
-        <li class="text-sm text-[#d2d8f9] active:text-red-500" id="planet3">EUROPA</li>
-        <li class="text-sm text-[#d2d8f9] active:text-red-500" id="planet4">TITAN</li>
-      </ul>
+    <section class="flex flex-col gap-10 lg:w-[28rem]">
+      <nav class="w-full lg:col-start-2 ">
+        <ul class="flex justify-center gap-4 lg:justify-start" id="planets_menu">
+          <li class="text-sm text-[#d2d8f9] md:text-base active:text-red-500" id="planet1">MOON</li>
+          <li class="text-sm text-[#d2d8f9] md:text-base active:text-red-500" id="planet2">MARS</li>
+          <li class="text-sm text-[#d2d8f9] md:text-base active:text-red-500" id="planet3">EUROPA</li>
+          <li class="text-sm text-[#d2d8f9] md:text-base active:text-red-500" id="planet4">TITAN</li>
+        </ul>
     </nav>
-    <div>
-      <h2 class="text-6xl text-white text-center" id="planeta_titulo">MOON</h2>
-      <p class="text-[#d2d8f9] text-center mt-4" id="planeta_descripcion">See our planet as you’ve never seen it before. A perfect relaxing trip away to help 
+
+      <div class="w-full md:px-16 border-b-[1px] border-[#383B4B] lg:col-span-2 lg:p-0">
+      <h2 class="text-7xl text-white text-center lg:text-start" id="planeta_titulo">MOON</h2>
+      <p class="text-[#d2d8f9] md:text-lg text-center md:leading-loose mt-4 mb-4 lg:text-base lg:text-start" id="planeta_descripcion">See our planet as you’ve never seen it before. A perfect relaxing trip away to help 
       regain perspective and come back refreshed. While you’re there, take in some history 
       by visiting the Luna 2 and Apollo 11 landing sites.</p>
     </div>
 
-    <div class="w-full flex flex-col items-center gap-1" id="parrafos">
-      
+    <div class="w-full flex flex-col items-center gap-1 md:grid grid-cols-2 md:justify-items-center lg:justify-items-start id="parrafos">
       <p class="text-[#d2d8f9]">AVG. DISTANCE</p>
-      <p class="text-white text-[28px]" id="distancia">384,400 KM</p>
-      <p class="text-[#d2d8f9]">EST. TRAVEL TIME</p>
-      <p class="text-white text-[28px]" id="tiempo">3 DAYS</p>
-
-    
+      <p class="text-white text-[28px] md:col-start-1 md:col-end-2" id="distancia">384,400 KM</p>
+      <p class="text-[#d2d8f9] md:col-start-2 md:col-end-3 md:row-start-1">EST. TRAVEL TIME</p>
+      <p class="text-white text-[28px] md:col-start-2 md:col-end-3" id="tiempo">3 DAYS</p>
     </div>
+    </section>
+    
     
 
   </main>
