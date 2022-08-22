@@ -14,9 +14,3 @@ function hideMenu(){
     hidden_nav.classList.add('hidden');
 }
 
-
-fetch("./data.json")
-.then(response => {
-   return response.json();
-})
-.then(jsondata => console.log(jsondata));
