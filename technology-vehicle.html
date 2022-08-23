@@ -4,29 +4,85 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
   
   <title>Frontend Mentor | Space tourism website</title>
 </head>
-<body>
+<body class="bg-[url('./assets/technology/background-technology-mobile.jpg')] md:bg-[url('./assets/technology/background-technology-tablet.jpg')] lg:bg-[url('./assets/technology/background-technology-desktop.jpg')]">
 
-  00 Home
-  01 Destination
-  02 Crew
-  03 Technology
 
-  03 Space launch 101
+  <header class="w-full p-4 flex justify-between md:p-14 relative">
+    <div>
+      <img class="w-[40px] h-[40px] md-w[48px] md-h[48px]" src="./assets/shared/logo.svg" alt="">
+    </div>
 
-  1
-  2
-  3
+    <!-- H A M B U R G U E R  B U T T O N-->
+    <div class="md:hidden mt-2 mr-6 pointer" id="hamburguer_btn">
+      <img class="w-[30px] h-[30px] " src="./assets/shared/icon-hamburger.svg" alt="">
+    </div>
 
-  The terminology...
-  Launch vehicle
+    <!-- H I D D E N  M E N U -->
+    <nav class="hidden absolute top-0 right-0 w-[15rem] h-[43rem] backdrop-blur" id="hidden_menu">
+      <div class="w-full flex justify-end">
+        <img class="p-6 pointer" src="./assets/shared/icon-close.svg" alt="" id="close_btn">
+      </div>
+      
+      <ul class="">
+        <li class="pl-6 pt-8 text-sm text-[#d2d8f9]"><a href="./index.html"><span class="text-white">00</span> HOME</a></li>
+        <li class="pl-6 pt-8 text-sm text-[#d2d8f9]"><a href="./destination-moon.html"><span class="text-white">01</span> DESTINATION</a></li>
+        <li class="pl-6 pt-8 text-sm text-[#d2d8f9]"><a href="./crew-commander.html"><span class="text-white">02</span> CREW</a></li>
+        <li class="pl-6 pt-8 text-sm text-[#d2d8f9]"><a href="./technology-vehicle.html"><span class="text-white">03</span> TECHNOLOGY</a></li>
+      </ul>
+    </nav>
 
-  A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a 
-  payload from Earth's surface to space, usually to Earth orbit or beyond. Our 
-  WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, 
-  it's quite an awe-inspiring sight on the launch pad!
+    <!-- N A V  B A R -->
+    <nav class="hidden lg:w-[40rem] lg:h-[5rem] lg: md:flex lg:p-6 backdrop-blur">
+      <ul class="w-100 flex items-center md:gap-x-10 lg:gap-x-12">
+        <li class="text-sm text-[#d2d8f9]"><a href="./index.html"><span class="text-white">00</span> HOME</a></li>
+        <li class="text-sm text-[#d2d8f9]"><a href="./destination-moon.html"><span class="text-white">01</span> DESTINATION</a></li>
+        <li class="text-sm text-[#d2d8f9]"><a href="./crew-commander.html"><span class="text-white">02</span> CREW</a></li>
+        <li class="text-sm text-[#d2d8f9]"><a href="./technology-vehicle.html"><span class="text-white">03</span> TECHNOLOGY</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- V E H I C L E S -->
+  <section class="grid gap-4 mt-6 lg:grid-cols-2">
+    <div class="col-span-2">
+      <h1 class="text-white text-center md:text-[20px]">03 Space launch 101</h1>
+    </div>
+    <div class="w-full lg:col-start-2 lg:col-end-3">
+      <picture>
+        <source media="(min-width: 1024px)" srcset="./assets/technology/image-launch-vehicle-portrait.jpg">
+        <img class="w-full h-[170px] md:h-[310px] lg:w-[500px] lg:h-[500px] " src="./assets/technology/image-launch-vehicle-landscape.jpg" alt="">
+      </picture>
+      
+    </div>
+
+    <div class="lg:grid lg:grid-cols-4 lg:items-center lg:justify-items-end lg:col-start-1 lg:col-end-2 lg:row-start-2">
+      <div class="w-full flex justify-center lg:w-[100px] lg:flex-col lg:items-end gap-5 py-6 ">
+        <button class="w-[40px] h-[40px] md:w-[60px] md:h-[60px] border border-neutral-600 hover:bg-white text-white hover:text-black rounded-full ">1</button>
+        <button class="w-[40px] h-[40px] md:w-[60px] md:h-[60px] border border-neutral-600 hover:bg-white text-white hover:text-black rounded-full ">2</button>
+        <button class="w-[40px] h-[40px] md:w-[60px] md:h-[60px] border border-neutral-600 hover:bg-white text-white hover:text-black rounded-full ">3</button>
+      </div>
+
+      <div class="flex flex-col items-center lg:col-start-2 col-end-5">
+       <p class="text-[#D0D6F9]">THE TERMINOLOGY...</p>
+       <p class="text-[24px] md:text-[40px] text-white">LAUNCH VEHICLE</p>
+
+       <div class="pt-8 px-16">
+          <p class="text-[#D0D6F9] text-[1.2rem] text-center md:leading-loose lg:text-start">A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a 
+          payload from Earth's surface to space, usually to Earth orbit or beyond. Our 
+          WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, 
+          it's quite an awe-inspiring sight on the launch pad!</p>
+       </div>
+      </div>
+    </div>
+    
+
+  </section>
+
+  <script src="./js/main.js"></script>
 </body>
 </html>
