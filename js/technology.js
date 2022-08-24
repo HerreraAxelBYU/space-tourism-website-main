@@ -1,4 +1,4 @@
-const imagen_grande = document.querySelector('#image_responsive');
+const imagen_grande = document.querySelector('#large_image');
 const imagen_pequeña = document.querySelector('#normal_image');
 const vehiculo = document.querySelector('#vehicle');
 const description = document.querySelector('#descripcion');
@@ -46,7 +46,7 @@ fetch('js/data.json')
 
 function cambiarVehiculo(datos){
 
-    //imagen_grande.srcset = datos.images.portrait;
+    imagen_grande.src = datos.images.portrait;
     imagen_pequeña.src = datos.images.landscape;
     vehiculo.textContent = datos.name;
     description.textContent = datos.description;
