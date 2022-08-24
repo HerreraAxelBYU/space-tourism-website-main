@@ -45,6 +45,7 @@ fetch('js/data.json')
             case 'MOON':
                 cambiarInfo(moon)
                 
+                
                 break
             case 'MARS':
                 cambiarInfo(mars)
@@ -72,4 +73,8 @@ function cambiarInfo(datos) {
     distancia.textContent = datos.distance;
     tiempo.textContent = datos.travel;
 
+    // UN POCO DE ESTILO
+    titulo.classList.add('uppercase');
+    distancia.classList.add('uppercase');
+    tiempo.classList.add('uppercase');
 }
